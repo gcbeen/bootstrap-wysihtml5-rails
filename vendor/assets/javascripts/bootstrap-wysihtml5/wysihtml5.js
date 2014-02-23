@@ -5074,7 +5074,7 @@ wysihtml5.dom.parse = (function() {
 	    	if (   parser.protocol == 'http:'
 	    	    || parser.protocol == 'https:'
 	    	    || parser.protocol == 'ftp:'
-				|| parser.href =~ /#|\//
+				//|| parser.href =~ /#|\//
 	    	) return attributeValue;
 	    };
 	})(),
