@@ -5069,11 +5069,12 @@ wysihtml5.dom.parse = (function() {
 	    	}
 	    	var parser = document.createElement('a');
 	    	parser.href = attributeValue;
+			console.log('href-attri', parser.href, attributeValue);
 	
 	    	if (   parser.protocol == 'http:'
 	    	    || parser.protocol == 'https:'
 	    	    || parser.protocol == 'ftp:'
-				|| attributeValue =~ /#|\//
+				|| parser.href =~ /#|\//
 	    	) return attributeValue;
 	    };
 	})(),
